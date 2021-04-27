@@ -1,0 +1,1109 @@
+body, html {
+    background-color: white;
+    max-width: 100vw;
+    width: 100%;
+    height: auto;
+}
+
+.fas {
+    margin-right: 8px;
+}
+
+.fa-eye {
+    margin: 0;
+}
+
+/* EN-TÊTE - HEADER______________________________________________________________ */
+
+.centerObject {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: calc(50% - 50%);
+    color: white;
+    text-align: center;
+}
+
+.centerObject h2 {
+    font-size: 4em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.centerObject p {
+    font-size: 1.8em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.fond {
+    width: 100%;
+    height: auto;
+}
+
+/* MENU BURGER */
+
+.burgerButton
+{
+	display: none;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.burger
+{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	position: fixed;
+	right: 0;
+    top: 0;
+	background: white;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+	transform: translateX(100%);
+	-webkit-transform: translateX(100%);
+	transition: transform .6s ease-in-out;
+	-webkit-transition: transform .6s ease-in-out;
+    z-index: 4;
+}
+
+.burger h1
+{
+	color: blue;
+	text-align: center;
+	font-size: 1em;
+	font-weight: 300;
+	margin-top: 100px;
+}
+
+.burger.isOpen
+{
+	transform: translateX(0%);
+	-webkit-transform: translateX(0%);
+}
+
+.burger ul
+{
+	list-style-type: none;
+	padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.burger ul li
+{
+	 margin: 10px 0;
+	 text-align: center;
+}
+
+.burger ul li a
+{
+	 color: black;
+	 text-decoration: none;
+	 font-size: 1em;
+	 font-weight: 400;
+	 letter-spacing: 0.1em;
+}
+
+/* BARRE DE NAVIGATION TOP______________________________________________________________ */
+
+#navigationTop {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: white;
+    height: 142px;
+    width: 100%;
+}
+
+.connectBar {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: #08a8ee;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    font-weight: 100;
+    z-index: 100;
+}
+
+.connectBar ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+.connectBar, .topNavAdmin {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 30px;
+    padding: 3px;
+}
+
+.connectBar a {
+    color: white;
+    margin-right: 20px;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.connectBar a:hover {
+    color: #08a8ee;
+    background-color: white;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    box-shadow: 0 8px 8px -8px rgba(0, 0, 0, .3);
+    padding: 0;
+    background-color: white;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0 30px 0 0;
+}
+
+.navbar li a {
+    color: black;
+    font-size: 1.4em;
+    font-family: 'Roboto', sans-serif;
+    vertical-align: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar li a:hover {
+    color: #08a8ee;
+}
+
+#navLogo {
+    width: 110px;
+    height: auto;
+}
+
+/* ADMINISTRATION____________________________________________________________________ */
+
+.usersList {
+    background-color: white;
+    justify-content: center;
+    margin: 5% auto 5% auto;
+    height: auto;
+    width: 70%;
+    display: none;
+}
+.userTable {
+    width: 100%;
+}
+
+.userTable thead {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5em;
+}
+
+.userTable th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.userTable tr {
+    height: 70px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px dashed #999999;
+}
+
+.userTable tbody tr {
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+}
+
+.adminContent {
+    width: 100vw;
+    display: flex;
+    min-height: 80vh;
+}
+
+.actualityContent, .activityContent {
+    width: 70vw;
+    height: 100vh;
+    margin: auto;
+    margin-top: 20vh;
+    display: block;
+}
+
+.mytextarea {
+    height: 50%;
+}
+
+/* NAVIGATION ADMIN TOP______________________________________________________________ */
+
+.bodyAdmin {
+    background-color:#d0dceb;
+}
+
+.topNavAdmin {
+    display: flex;
+    vertical-align: middle;
+    background-color: #334e70;
+}
+
+.topNavAdmin a:hover {
+    color: #192534;
+}
+
+.topNavAdmin ul {
+    margin: 0;
+}
+
+/* NAVIGATION ADMIN LEFT */
+
+.leftNavAdmin {
+    width: 15vw;
+}
+
+#creationNav ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+#creationNav ul li a {
+    text-align: left;
+    border-radius: 0;
+    width: 100%;
+    white-space: normal;
+}
+
+/* MAIN MENU BURGER______________________________________________________________ */
+
+#expandedMenu.isOpen
+{
+	transform: translateY(0%);
+	-webkit-transform: translateY(0%);
+}
+
+#expandedMenu {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 8px 8px -8px rgba(0, 0, 0, .3);
+    padding: 30px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    right: -10px;
+    top: 142px;
+    transform: translateX(100%);
+	-webkit-transform: translateX(100%);
+	transition: transform .6s ease-in-out;
+	-webkit-transition: transform .6s ease-in-out;
+}
+
+.expandedMenuSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.expandedMenuSection h3 {
+    font-family: 'Bebas Neue';
+    font-size: 1.2em;
+}
+
+.expandedMenuSection a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 0.9em;
+    color: black;
+}
+
+.expandedMenuSection a:hover {
+    color: #08a8ee;
+    text-decoration: none;
+}
+
+.expandedMenuSection ul {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid black;
+}
+
+/* BARRE DE NAVIGATION LEFT______________________________________________________________ */
+
+#navLeft {
+    width: 15%;
+    height: 500px;
+    margin-right: 50px;
+}
+
+#navLeft h2 a {
+    font-family: 'Bebas Neue';
+    color: black;
+}
+
+#navLeft h2 {
+    font-family: 'Bebas Neue';
+    letter-spacing: .1em;
+    border-bottom: 1px solid black;
+}
+
+#navLeft ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+#navLeft a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    letter-spacing: .1em;
+    color: black;
+}
+
+#navLeft a:hover {
+    color: #08a8ee;
+    text-decoration: none;
+}
+
+#navLeft ul li .drop {
+    display: none;
+}
+
+/* DETAILS______________________________________________________________ */
+
+#details {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 65%;
+    margin: auto;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.bloc {
+    width: 200px;
+    text-align: center;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.bloc img {
+    width: 120px;
+    height: auto;
+}
+
+.bloc p {
+    color: #999999;
+}
+
+.bloc h2 {
+    margin: 10px 0 18px 0;
+}
+
+/* ACTUALITÉS - ACTUALITIES______________________________________________________________ */*
+
+#infoLogo {
+    width: 53px;
+    height: 53px;
+    margin: 10px;
+}
+
+#contentArticle {
+    margin: 0 auto 10% auto;
+    width: 50%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#contentArticle .titleBloc {
+    justify-content: left;
+}
+
+#contentArticle h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 0;
+}
+
+.News h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.titleBloc {
+    display: flex;
+    border-bottom: 1px dashed #999999;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleBloc .buttonsArticle {
+    margin-left: auto;
+}
+
+
+.titleNews {
+    margin: 10px 10px 0 0;
+}
+
+.contentBloc {
+    padding: 5%;
+}
+
+span {
+    color: #08a8ee;
+}
+
+.articleBloc {
+    font-size: 1.2em;
+}
+
+/* PAGE DE CONTACT */
+
+.contactCenter {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: calc(50% - 50vh);
+    color: white;
+    text-align: center;
+}
+
+.contactCenter h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 3em;
+}
+
+.contactCenter h1 {
+    font-family: "Orelega One", sans-serif;
+    font-size: 5em;
+}
+
+.fondContact {
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+
+.infosContact {
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+.contactUs {
+    width: 30%;
+}
+
+.infosContact h2 {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: .1em;
+}
+
+.contactUs p {
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    margin-bottom: 5%;
+}
+
+.miniLogo {
+    width: 50px;
+    margin: 4%;
+    height: 50px;
+}
+
+.map {
+    width: 40%;
+    height: 80%;
+}
+
+.map iframe {
+    width: 100%;
+    height: 80%;
+}
+
+.contactLogoInfos {
+    display: flex;
+    align-items: center;
+    margin-right: 3%;
+}
+
+.contactInfo span {
+    font-weight: bold;
+}
+
+.contactInfo p {
+    margin: 0;
+}
+
+#locMairie {
+    width: 40%;
+    height: 60%;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactForm input {
+    margin: 2%;
+}
+
+.contactForm {
+    align-items: center;
+}
+
+.contactForm h2 {
+    margin: 2%;
+}
+
+.contactForm .mytextarea {
+    height: 200px;
+}
+
+.formMain {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 50%;
+}
+
+.formMain button {
+    width: 30%;
+    margin: 0 auto 5% auto;
+}
+
+.flexRow {
+    display: flex;
+}
+
+
+.errorBody {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* COMMERCANTS */
+
+#contentCommercants {
+    width: 50%;
+    margin: 0;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.blocCommercants {
+    margin: 1%;
+    width: 40%;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;    border-radius: 15px;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+}
+
+.blocCommercants a {
+    margin-top: auto;
+}
+
+.blocCommercants h3 {
+    margin: 0;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.blocCommercants p {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* RESTAURATION */
+
+.mainRestauration {
+    display: flex;
+    margin: 15% auto 10% auto;
+    height: auto;
+    justify-content: center;
+    text-align: justify;
+}
+
+/* FOIRE AUX QUESTION */
+
+.faqMain {
+    margin: 25vh auto 10vh auto;
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    text-align: justify;
+}
+
+.faqContent {
+    justify-content: left;
+}
+
+.faqContent h3 {
+    font-family: "Bebas Neue", sans-serif;
+
+}
+
+.faqResponse {
+    margin-left: 5%;
+}
+
+.bebas {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3em;
+    letter-spacing: .1em;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.roboto {
+    font-family: "Roboto", sans-serif;
+    font-size: 3em;
+}
+
+/* ESPACE MEMBRE PROFIL */
+
+.imgProfil {
+    margin-right: 30px;
+}
+
+.profilInfos {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.profilInfos h3 {
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: .1em;
+}
+
+.mainProfil {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: justify;
+    height: 75vh;
+}
+
+.profilContent {
+    display: flex;
+}
+
+.avatar {
+    display: flex;
+}
+
+.profilH2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    border-bottom: 1px solid black;
+}
+
+form button {
+    margin-top: 10px;
+}
+
+/* PIED DE PAGE - FOOTER______________________________________________________________ */
+
+.footer {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footerBloc {
+    height: 200px;
+    margin-top: 15px;
+}
+
+.footerBloc h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    font-size: 1.4em;
+    margin: 0;
+    margin-bottom: 10px;
+    border-bottom: 2px solid white;
+}
+
+.footerBloc a {
+    font-family: 'Roboto', sans-serif;
+    color: #838383;
+    text-decoration: none;
+    font-size: .9em;
+}
+
+.footerBloc a:hover {
+    text-decoration: none;
+    color: #08a8ee;
+}
+
+.footerBloc ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+/* VILLE______________________________________________________________ */
+
+.main {
+    display: flex;
+    margin: 15% auto 10% auto;
+    height: auto;
+    justify-content: center;
+    text-align: justify;
+}
+
+.News {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 80%;
+    vertical-align: middle;
+}
+
+#content {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#content h2 {
+    font-family: "Bebas Neue";
+    letter-spacing: .1em;
+}
+
+.blocInfos {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2%;
+}
+
+
+.imgResponsive {
+    width: 100%;
+    height: 100%;
+}
+
+.oldImg {
+    width: 400px;
+    height: 230px;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+.cantineImg {
+    width: 70%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+#cantineDropImgMars, #cantineDropImgFevrier {
+    border-bottom: 3px solid black;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.imgMenu {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+/* PAGE DE CONNEXION______________________________________________________________ */
+
+.connexionBloc {
+    text-align: center;
+}
+
+.connexionBloc input {
+    margin: 10px;
+}
+
+.connexionBloc button {
+    margin-bottom: 10px;
+}
+
+.title_img {
+    width: 10vw;
+    height: auto;
+}
+
+/* BLOC METEO */
+
+#titleMeteo {
+    font-style: italic;
+}
+
+.bodyMeteo {
+    background: url("../images/clouds.jpg");
+    height: auto;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+}
+
+.meteoBloc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50vh;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.meteoBloc h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: .3em;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.meteoBloc p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 1.5em;
+}
+
+#meteoTemp {
+    font-family: 'Roboto';
+    font-weight: bolder;
+    font-size: 2.5em;
+}
+
+@media screen and (max-width: 1020px) {
+    #navLogo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    #details {
+        width: 100%;
+    }
+
+    .centerObject {
+        top: calc(50% - 750px);
+    }
+
+    #navigationTop {
+        height: 0;
+    }
+
+    .main {
+        margin-bottom: 50%;
+        justify-content: space-around;
+    }
+
+    #navLeft {
+        width: 20%;
+        height: 500px;
+        margin-right: 50px;
+    }
+
+    #contentCommercants {
+        width: 60%;
+    }
+
+    #contentArticle {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .navbar {
+        display: none;
+    }
+
+    .centerObject, .contactCenter {
+        top: calc(15% - 330px);
+        font-size: .5em;
+    }
+
+    .contactCenter h1 {
+        font-size: 3em;
+    }
+
+    .infosContact {
+        flex-direction: column;
+        width: 100vw;
+        padding: 2%;
+    }
+
+    .contactUs, .map {
+        width: 100%;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .mainRestauration {
+        display: flex;
+        flex-direction: column;
+        margin: 15% auto 10% auto;
+        height: auto;
+        justify-content: center;
+        text-align: justify;
+    }
+
+    #navLeft, #content {
+        width: 100%;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 3%;
+        text-align: center;
+    }
+
+    #navLeft {
+        height: auto;
+    }
+
+    #navLeft ul {
+        padding: 0;
+    }
+
+    #expandedMenu {
+        display: none;
+    }
+
+    .adminLi {
+        display: none;
+    }
+
+    .usersList {
+        width: 100%;
+    }
+
+    #creationNav li {
+        width: 100vw;
+    }
+
+    .actualityContent {
+        width: 90vw;
+    }
+
+    .adminContent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mainProfil, .profilContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profilH2 {
+        margin: 15%;
+    }
+
+    .imgProfil {
+        margin: 0;
+    }
+
+    .faqResponse {
+        margin: 0;
+    }
+
+    .connectBar {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .News {
+        width: 100%;
+    }
+
+    .titleNews h2 {
+        font-size: 1em;
+    }
+
+    .titleNews p {
+        font-size: .8em;
+    }
+
+    #infoLogo {
+        width: 30px;
+        height: auto;
+    }
+
+    .buttonsArticle a {
+        font-size: .7em;
+    }
+
+    .faqMain {
+        width: 95%;
+    }
+
+    #contentCommercants {
+        width: 100%;
+    }
+    
+    .oldImg {
+        display: none;
+    }
+
+    ul.drop {
+        padding: 0;
+    }
+
+    .burgerButton {
+        display: block;
+    }
+
+    .connectBar li {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .buttonsArticle {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footerBloc {
+        height: auto;
+        margin: 5%;
+    }
+
+}
