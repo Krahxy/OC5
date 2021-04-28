@@ -14,11 +14,11 @@
                     </div>
                     
                     <div class="buttonsArticle">
-                        <a href="index.php?action=article-id-<?php echo htmlspecialchars($article['id']); ?>" class="btn btn-primary"><i class="fas fa-eye"></i></a>
+                        <a href="index.php?action=article-id-<?php echo htmlspecialchars_decode($article['id']); ?>" class="btn btn-primary"><i class="fas fa-eye"></i></a>
 <?php                   if (isset($_SESSION['status'])) {
                             if ($_SESSION['status'] == 1) { ?>
-                                <a href="index.php?action=articleUpdate-id-<?php echo $article['id']; ?>" class="btn btn-warning"><i class="far fa-edit"></i></a>
-                                <a href="index.php?action=articleDelete-id-<?php echo $article['id']; ?>" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
+                                <a href="index.php?action=articleUpdate-id-<?php echo htmlspecialchars_decode($article['id']); ?>" class="btn btn-warning"><i class="far fa-edit"></i></a>
+                                <a href="index.php?action=articleDelete-id-<?php echo htmlspecialchars_decode($article['id']); ?>" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
                     <?php   }
                         }?>
                     </div>
