@@ -13,12 +13,12 @@ include('_navbar.php');
 
         <?php
         if(!empty($userInfo['avatar'])) { ?>
-            <img class="imgProfil" src="./public/images/members/<?php echo $userInfo['avatar'];?>" width="150" /><?php
+            <img class="imgProfil" src="./public/images/members/<?php echo htmlspecialchars_decode($userInfo['avatar']);?>" width="150" /><?php
         } ?>
 
         <div class="profilInfos">
-            <h3 class="profilName"> <?php echo $userInfo['pseudo']?></h3>
-            <p class="profilEmail">Adresse mail : <?php echo $userInfo['email']?></p>
+            <h3 class="profilName"> <?php echo htmlspecialchars_decode($userInfo['pseudo'])?></h3>
+            <p class="profilEmail">Adresse mail : <?php echo htmlspecialchars_decode($userInfo['email'])?></p>
         </div>
 
     </div>
