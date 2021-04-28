@@ -112,17 +112,16 @@ function loginPage($values) { // Connexion du membre si les mots de passe sont c
     $isPasswordCorrect = password_verify($pass, $resultat['pass']); // On vérifie si le mot de passe corresponds au mot de passe hashé
     if (!$resultat) {
         $message='';
-        header('Location: index.php?action=error&message='.$message);
+        header('Location: index.php?action=error-message-'.$message);
     } else {
         if ($isPasswordCorrect) {
             $_SESSION['id']     = $resultat['id'];
             $_SESSION['pseudo'] = $pseudo;
             $_SESSION['status'] = $resultat2[0];
             header('Location: index.php?action=home');
-
         } else {
             $message = 'Mauvais identifiant ou mot de passe.';
-            header('Location: index.php?action=error&message='.$message);
+            header('Location: index.php?action=error-message-'.$message);
         }
     } 
 }
@@ -197,25 +196,28 @@ function pageProfil($values) {
 function updateProfil($values) {
     extract($values);
     if(isset($avatar) AND !empty($avatar['name'])) {
-        $tailleMax = 2097152;
-        $extensionsValides = array('jpg', 'jpeg', 'gif', 'png');
-        if($avatar['size'] <= $tailleMax) {
+        $tailleMax = 2097152; // On définit une taille maximale du fichier
+        $extensionsValides = array('jpg', 'jpeg', 'gif', 'png'); // Création du tableau avec les extension que l'on accepte
+        if($avatar['size'] <= $tailleMax) { // On vérifie si la taille ne dépasse pas la taille maximale acceptée
             $extensionUpload = strtolower(substr(strrchr($avatar['name'], '.'), 1));
             if(in_array($extensionUpload, $extensionsValides)) {
-                $chemin = "./public/images/members/".$id.".".$extensionUpload;
-                $resultat = move_uploaded_file($avatar['tmp_name'], $chemin);
+                $chemin = "./public/images/members/".$id.".".$extensionUpload; // On définit l'endroit et le nom du fichier où il sera enregistré
+                $resultat = move_uploaded_file($avatar['tmp_name'], $chemin); // On envoi le fichier au chemin prédéfini juste avant
                 if($resultat) {
                     $reqUser = new User();
-                    $req = $reqUser -> updateAvatar($id, $avatar);
+                    $req = $reqUser -> updateAvatar($id, $avatar); // On envoi dans la bdd
                     header('Location: index.php?action=profil');
                 } else {
                     $message = "Problème lors de l'envoi du fichier";
+                    header('Location: index.php?action=error-message-'.$message);
                 }
             } else {
                 $message = "Votre fichier envoyé doit etre dans un format suivant : jpg, jpeg, gif, png";
+                header('Location: index.php?action=error-message-'.$message);
             }
         } else {
             $message = "Votre fichier envoyé est trop volumineux, il ne doit pas dépasser 2Mo";
+            header('Location: index.php?action=error-message-'.$message);
         }
     }
 }
