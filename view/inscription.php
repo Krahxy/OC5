@@ -18,7 +18,6 @@
                 </form>
 
                 <a href="./index.php?action=connexion">Déjà inscrit ? Connectez-vous !</a>
-                <?php echo (isset($_SESSION['messageErrorInfo'])) ? $_SESSION['messageErrorInfo'] : '';?>
             </div>
 
     </div>
